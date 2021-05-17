@@ -1,0 +1,232 @@
+
+body {
+    min-width: 300px;
+}
+
+.encabezado{
+    display: flex;
+    width: 100%;
+    min-height: 19em;
+    position: fixed;
+    font-family: monospace;
+    flex-wrap: wrap;
+    background-image: url("/iPage/imagenes/fondo-encabezado.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: silver;
+}
+
+.logo {
+    display: block;
+    position: relative;
+    margin: 2em 9em 0em 8em;
+    box-sizing: border-box;
+    min-width: 10em;
+    width: 35%;
+}
+
+@media (max-width: 79em) {
+    .logo {
+        width: 27.5%;
+        margin-left: 6em;
+        margin-right: 6em;
+    }
+}
+
+@media (max-width: 65em) {
+    .logo {
+        width: 20%;
+        margin-left: 4em;
+        margin-right: 3em;
+    }
+}
+
+@media (max-width: 53em) {
+    .encabezado {
+        justify-content: center;
+    }
+}
+
+.logo__img {
+    border: 3px ridge;
+    border-radius: 100%;
+    box-shadow: 0px 0px 20px 1px black;
+    width: 11em;
+    height: 11em;  
+}
+
+.container__headerright {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 1em;
+    min-width: 300px;
+}
+
+@media (max-width: 53em) {
+    .container__headerright {
+        margin-top: .5em;
+    }
+}
+
+.encabezado__lema {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    margin-left: .5em;
+}
+
+.encabezado__lema a {
+    font-size: 2.2em;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 2px 0 white;
+}
+
+.buscador {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-left: 15em;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+@media (max-width: 53em) {
+    .buscador {
+        justify-content: center;
+        margin-left: 0;
+    }
+}
+
+.buscador__texto {
+    width: 200px;
+    height: 30px;
+    background-color: white;
+    border: solid 2px black;
+    text-align: center;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.buscador__texto::placeholder {
+    letter-spacing: -1px;
+}
+
+.buscador__texto:enabled {
+    outline: 0px;
+}
+
+.buscador__enviar {
+    width: 60px;
+    height: 30px;
+    background-color:rgba(50, 177, 228, 0.877);
+    border: solid 2px black;
+    border-radius: 0px 15px 15px 0px;
+    margin-left: 3px;
+    color: black;
+}
+
+.buscador__enviar:active {
+    background-color: skyblue;
+    border-radius: 0px 15px 15px 0px;
+}
+
+.buscador__enviar:enabled {
+    outline: 0px;
+}
+
+.encabezado__nav {
+    display: block;
+    background-color: rgb(85, 183, 221);
+    margin-top: 8.5em;
+    margin-left: 5em;
+    width: 40.25em;
+}
+
+.encabezado__nav ul {
+    list-style: none;
+}
+
+.encabezado__nav li {
+    display: block;
+    float: left;
+    background-color: rgb(85, 183, 221);
+}
+
+.encabezado__nav h3{ 
+    padding: .4em 1.5em;
+    border-bottom: 2px solid grey;
+    border-right: 1px solid white;
+}
+
+.encabezado__nav h3:hover {
+    border-bottom: 2px solid black;
+}
+
+@media (max-width: 53em) {
+    .encabezado__nav {
+        margin-top: 2em;
+        float: center;
+    }
+}
+
+.slider {
+    background-color: lightgray;
+}
+
+.slider-container {
+    padding-top: 15em;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 85%;
+    box-shadow: 0px 0px 100px 5px black;
+    border-radius: 6px;
+}
+
+.slider-box {
+    animation: autoSlider 15s infinite alternate-reverse ;
+    transition: all 0.75s ease;
+    height: 100%;
+    width: 300%;
+}
+
+.element-one,
+.element-two,
+.element-three {
+    height: 300px;
+    max-height: 100%;
+    float: left;
+    width: 33.333%;
+    background: blue;
+}
+
+article img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
+@keyframes autoSlider {
+    0% {
+        margin-left: 0;
+    }
+    25% {
+        margin-left: 0;
+    }
+    35% {
+        margin-left: -100%;
+    }
+    60% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    90% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
